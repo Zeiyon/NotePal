@@ -1,0 +1,27 @@
+<div class="fixed top-0 right-0">
+    <div class="p-3 bg-[#1d1f21] rounded-xl">
+        <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-1 px-3 rounded mx-1" routerLink="/notes">
+            <fa-icon [icon]="faPlus"></fa-icon>
+        </button>
+        <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-1 px-3 rounded mx-1" (click)="navbarOpen = !navbarOpen">
+            <fa-icon [icon]="faCode"></fa-icon>
+        </button>
+        <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-1 px-3 rounded mx-1" routerLink="/login">
+            <fa-icon [icon]="faUser"></fa-icon>
+        </button>
+        <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-1 px-3 rounded mx-1" routerLink="/notelist">
+            <fa-icon [icon]="faListUl"></fa-icon>
+        </button>
+    </div>
+    <div *ngIf="navbarOpen" class="bg-[#1d1f21] w-24 h-fit rounded-lg rounded-t-none p-3 pt-0 ml-10 flex flex-col items-center gap-y-1">
+        <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-1 px-3 w-full rounded" routerLink="/notelist">
+            Text
+        </button>
+        <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-1 px-3 w-full rounded" routerLink="/notelist">
+            Java
+        </button>
+        <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-1 px-3 w-full rounded" routerLink="/notelist">
+            Python
+        </button>
+    </div>
+</div>
