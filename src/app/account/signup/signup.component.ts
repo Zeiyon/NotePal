@@ -5,24 +5,34 @@ import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-signup',
   standalone: true,
   imports: [FontAwesomeModule, RouterOutlet, RouterLink],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  templateUrl: './signup.component.html',
+  styleUrl: './signup.component.scss'
 })
-export class LoginComponent {
+export class SignupComponent {
   faEye = faEye;
   faEyeSlash = faEyeSlash;
 
-  showPassword: boolean = false;
+  showPassword: boolean;
+  showConfirmPassword: boolean;
 
   onSubmit() {
     console.log('Form submitted');
   }
 
+  constructor() {
+    this.showPassword = false;
+    this.showConfirmPassword = false;
+  }
+
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
+  }
+
+  toggleConfirmPasswordVisibility() {
+    this.showConfirmPassword = !this.showConfirmPassword;
   }
 
 }
